@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild -scheme FightFire -destination 'platform=iOS Simulator,name=iPhone 16' build)",
+      "Bash(ls -la /Users/hades/Desktop/Code/26/04/0410-3/FightFire/FightFire/Assets.xcassets/ui/*/)",
+      "Bash(xcodebuild -scheme FightFire -destination 'platform=iOS Simulator,name=iPhone 16 Pro' build)"
+    ]
+  }
+}

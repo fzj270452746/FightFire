@@ -1,0 +1,6 @@
+framework module Pods_FightFire {
+  umbrella header "Pods-FightFire-umbrella.h"
+
+  export *
+  module * { export * }
+}
