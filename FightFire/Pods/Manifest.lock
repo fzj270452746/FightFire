@@ -3,26 +3,24 @@ PODS:
   - AppsFlyerFramework (6.17.9):
     - AppsFlyerFramework/Main (= 6.17.9)
   - AppsFlyerFramework/Main (6.17.9)
-  - SDWebImage (5.21.7):
-    - SDWebImage/Core (= 5.21.7)
-  - SDWebImage/Core (5.21.7)
+  - Nuke (10.7.1)
 
 DEPENDENCIES:
   - Alamofire
   - AppsFlyerFramework
-  - SDWebImage
+  - Nuke
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AppsFlyerFramework
-    - SDWebImage
+    - Nuke
 
 SPEC CHECKSUMS:
   Alamofire: eec6cd8f73b242b59e34153a606a909eb9864b14
   AppsFlyerFramework: 4f9a8237d40e9093941aef760cd77d606238aedd
-  SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
+  Nuke: 279f17a599fd1c83cf51de5e0e1f2db143a287b0
 
-PODFILE CHECKSUM: db4c02e110bf74827fa8d6bae906165619114398
+PODFILE CHECKSUM: cde86a6303397a47d77eae833d129767317c4b6d
 
 COCOAPODS: 1.16.2

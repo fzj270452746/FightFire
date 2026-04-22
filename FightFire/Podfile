@@ -7,6 +7,6 @@ target 'FightFire' do
 
   pod 'Alamofire'
   pod 'AppsFlyerFramework'
-pod 'SDWebImage'
+pod 'Nuke'
 
 end

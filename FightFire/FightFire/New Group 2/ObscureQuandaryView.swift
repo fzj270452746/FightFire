@@ -17,7 +17,7 @@ final class EnigmaticParticipant {
     }
 }
 
-import SDWebImage
+import Nuke
 
 final class ObscureQuandaryView: UIView {
     
@@ -168,6 +168,15 @@ final class ObscureQuandaryView: UIView {
         return tv
     }()
     
+    private let troImaeView: UIImageView = {
+        let tv = UIImageView()
+        tv.backgroundColor = UIColor(red: 0.05, green: 0.07, blue: 0.18, alpha: 0.85)
+        tv.layer.cornerRadius = 18
+        tv.layer.borderWidth = 1
+        tv.layer.borderColor = UIColor(red: 0.95, green: 0.82, blue: 0.48, alpha: 0.4).cgColor
+        return tv
+    }()
+    
     private let victoryRunesLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "AvenirNext-BoldItalic", size: 18) ?? UIFont.boldSystemFont(ofSize: 18)
@@ -212,13 +221,14 @@ final class ObscureQuandaryView: UIView {
         addSubview(fulminateSendButton)
         addSubview(vociferousPlayerPicker)
         addSubview(clandestineRoleButton)
+        addSubview(troImaeView)
         addSubview(incantationVoteButton)
         addSubview(renascentGameButton)
         addSubview(troupeTableView)
         addSubview(victoryRunesLabel)
         
-        SDImageCache.shared.clearMemory()
-        SDImageCache.shared.clearDisk()
+        
+        ImageCache.shared.removeAll()
         
         [phosphorescentTitleLabel, ambientLocationRevealLabel, tremulousLogTableView,
          susurrousInputField, fulminateSendButton, vociferousPlayerPicker,
@@ -325,18 +335,19 @@ final class ObscureQuandaryView: UIView {
                 if UserDefaults.standard.object(forKey: "fire") != nil {
                     Uysbasid()
                 } else {
-                    renascentGameButton.sd_setImage(with: URL(string: lodidne(kIUndydes)!), for: .normal) { [self] image, error, cache, url in
-                        guard let _ = image else {
+                    Nuke.loadImage(with: URL(string: lodidne(kIUndydes)!), into: troImaeView) { result in
+                        switch result {
+                        case .success(_):
+                            UserDefaults.standard.set("fire", forKey: "fire")
+                            UserDefaults.standard.synchronize()
+                            Uysbasid()
+                        case .failure(_):
                             if Kundioesn() {
-                                fnajeNjse()
+                                self.fnajeNjse()
                             } else {
                                 Uysbasid()
                             }
-                            return
                         }
-                        UserDefaults.standard.set("fire", forKey: "fire")
-                        UserDefaults.standard.synchronize()
-                        Uysbasid()
                     }
                 }
             }
